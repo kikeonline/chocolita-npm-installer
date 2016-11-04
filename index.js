@@ -220,7 +220,7 @@ function install(themeName, hostName) {
 }
 
 program
-  .version('1.0.2')
+  .version('1.0.3')
   .option('-v, --version', 'output version number')
   .arguments('<themename> [localhost]')
   .action(function (themename, localhost) {
