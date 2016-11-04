@@ -6,7 +6,7 @@ Instalador para el tema base de Wordpress [Chocolita.](https://github.com/monchi
 ### Instalar Node.js
 [Baja el paquete](https://nodejs.org/en/download/) correspondiente a tu plataforma y corre el instalador.
 
-En la [Terminal.](https://www.google.com.ni/search? q=google+search+link&oq=google+search+link&aqs=chrome..69i57j69i64.3252j0j4&sourceid=chrome&es_sm=119&ie=UTF-8#q=terminal+window&pws=1) podes verificar tu instalación de Node.js con:
+En la Terminal podes verificar tu instalación de Node.js con:
 ```
 $ node -v
 ```
