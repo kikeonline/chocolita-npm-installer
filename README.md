@@ -34,4 +34,6 @@ Asegurate de que estas en tu carpeta themes de Wordpress /wordpress/wp-content/t
   ```
   
 ### Contribuciones
+- [Leandro Gómez](https://github.com/leogg)
+
 Con gusto pueden clonar/forkear/pull para mejorar el instalador 🐮
