@@ -1,0 +1,33 @@
+{
+  "name": "chocolita-npm-installer",
+  "version": "1.0.0",
+  "description": "Instalador del tema base de Wordpress Chocolita.",
+  "bin": {
+    "chocolita": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kikeonline/chocolita-npm-installer"
+  },
+  "keywords": [
+    "chocolita",
+    "wordpress",
+    "theme",
+    "installer"
+  ],
+  "author": "kikeonline",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^1.2.2",
+    "nodegit": "^0.16.0",
+    "replace": "^0.3.0",
+    "shelljs": "^0.7.5",
+    "simple-git": "^1.59.0"
+  }
+}
