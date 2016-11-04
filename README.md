@@ -1,5 +1,6 @@
 # Chocolita NPM Installer
 Instalador para el tema base de Wordpress [Chocolita.](https://github.com/monchitonet/Chocolita)
+
 ![alt tag](https://raw.githubusercontent.com/kikeonline/chocolita-npm-installer/master/screen.gif)
 
 ### Instalar Node.js
