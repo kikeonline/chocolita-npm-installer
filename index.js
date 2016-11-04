@@ -52,23 +52,23 @@ function wordpressThemeCheck() {
 	if (currentFolder === 'themes') {
 		log(chalk.bold.green('✓ Wordpress theme encontrado.'));
 	} else {
-		console.error(chalk.bold.red('! Wordpress theme folder NO se encuentra ✘' + EOL));
+		console.error(chalk.bold.red('! Wordpress theme folder? ✘' + EOL));
 	}
 }
 
 function gitCheck() {
 	if (!which('git')) {
-	  console.error(chalk.bold.red('! Git NO se está instalado ✘'));
+	  console.error(chalk.bold.red('! Git NO está instalado ✘'));
 	} else {
 		log(chalk.bold.green('✓ Git'));
 	}
 	if (!which('gulp')) {
-	  console.error(chalk.bold.red('! Gulp NO se está instalado ✘'));
+	  console.error(chalk.bold.red('! Gulp NO está instalado ✘'));
 	} else {
 		log(chalk.bold.green('✓ Gulp'));
 	}
 	if (!which('bower')) {
-	  console.error(chalk.bold.red('! Bower NO se está instalado ✘'));
+	  console.error(chalk.bold.red('! Bower NO está instalado ✘'));
 	} else {
 		log(chalk.bold.green('✓ Bower'));
 	}
@@ -220,7 +220,7 @@ function install(themeName, hostName) {
 }
 
 program
-  .version('1.0.0')
+  .version('1.0.2')
   .option('-v, --version', 'output version number')
   .arguments('<themename> [localhost]')
   .action(function (themename, localhost) {
