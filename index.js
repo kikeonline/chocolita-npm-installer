@@ -21,7 +21,7 @@ function banner() {
 		'(--| O O |--) | |   |  _ \\ / _ \\ / __/ _ \\| | | __/ _\\ | ' + EOL +
 		' --|_____|--  | \\__/\\ | | | (_) | (_| (_) | | | || (_| |' + EOL +
 		'  (  . .  )    \\____/_| |_|\\___/ \\___\\___/|_|_|\\__\\__,_|' + EOL +
-		'   –------     Wordpress Tema Base - NPM Installer 1.0.5' + EOL + 
+		'   –------     Wordpress Tema Base - NPM Installer 1.0.6' + EOL + 
 		'      ()'));
 	console.log('');
 }
@@ -38,7 +38,7 @@ function bye() {
 function exito() {
 	console.error(chalk.bold.green(EOL +
 		'    ()_()' + EOL + 
-		'   (     )                 Instalación Completada ✓ 🐮 ' + EOL + 
+		'   (     )                 Instalación Completada ✓ 🐮' + EOL + 
 		' --| O O |--         Ingresa a WordPress y activa el tema.' + EOL +
 		'(--|_____|--)                Para más información:' + EOL +
 		'  (  . .  )         https://github.com/monchitonet/Chocolita' + EOL +
@@ -193,7 +193,12 @@ function gitClone(themeName, hostName) {
 		var styleCssFile = path.join(themeName, 'style.css');
 		var gulpFile = path.join(themeName, 'gulpfile.js');
 		replaceText(styleCssFile, 'Theme Name: Chocolita', 'Theme Name: ' + themeName);
-		replaceText(gulpFile, "proxy: 'playground'", "proxy: '"+ hostName +"'");
+		log(chalk.green('✓ Cambiando gulpfile...'));
+		replaceText(gulpFile, "proxy: 'playground',", "proxy: '" + hostName + "',");
+		replaceTextDir(themeName + path.resolve("/."), "'dist/chocolita'", "'dist/" + themeName + "'"); //build-copy
+		replaceTextDir(themeName + path.resolve("/."), "'chocolita.zip'", "'" + themeName + ".zip'"); //build-zip
+		replaceTextDir(themeName + path.resolve("/."), "'!dist/chocolita.zip'", "'!dist/" + themeName + ".zip'"); //build-delete
+		log(chalk.green('✓ Cambiando archivos varios...'));
 		replaceTextDir(themeName + path.resolve("/."), "'chocolita'", "'" + themeName + "'"); //text domain
 		replaceTextDir(themeName + path.resolve("/."), "chocolita_", themeName + "_"); //function name
 		replaceTextDir(themeName + path.resolve("/."), " chocolita", " " + themeName); //DocBlocks
