@@ -27,7 +27,7 @@ function banner() {
 		'(--| O O |--) | |   |  _ \\ / _ \\ / __/ _ \\| | | __/ _\\ | ' + EOL +
 		' --|_____|--  | \\__/\\ | | | (_) | (_| (_) | | | || (_| |' + EOL +
 		'  (  . .  )    \\____/_| |_|\\___/ \\___\\___/|_|_|\\__\\__,_|' + EOL +
-		'   –------     Wordpress Tema Base - NPM Installer 1.2.0' + EOL + 
+		'   –------     Wordpress Tema Base - NPM Installer 1.2.1' + EOL + 
 		'      ()'));
 	console.log('');
 }
@@ -230,7 +230,7 @@ function install(themeName, hostName) {
 }
 
 program
-.version('1.2.0')
+.version('1.2.1')
 .option('-v, --version', 'output version number')
 .arguments('<themename> [localhost]')
 .action(function (themename, localhost) {
