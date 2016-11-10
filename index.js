@@ -14,7 +14,10 @@ var EOL = os.EOL;
 const log = console.log;
 const updateNotifier = require('update-notifier');
 const pkg = require('./package.json');
-const notifier = updateNotifier({pkg});
+const notifier = updateNotifier({
+    pkg,
+    updateCheckInterval: 1000 * 60 * 60 // Every hour
+});
 
 function banner() {
 	log(chalk.bold.blue(EOL +
@@ -24,7 +27,7 @@ function banner() {
 		'(--| O O |--) | |   |  _ \\ / _ \\ / __/ _ \\| | | __/ _\\ | ' + EOL +
 		' --|_____|--  | \\__/\\ | | | (_) | (_| (_) | | | || (_| |' + EOL +
 		'  (  . .  )    \\____/_| |_|\\___/ \\___\\___/|_|_|\\__\\__,_|' + EOL +
-		'   –------     Wordpress Tema Base - NPM Installer 1.0.9' + EOL + 
+		'   –------     Wordpress Tema Base - NPM Installer 1.2.0' + EOL + 
 		'      ()'));
 	console.log('');
 }
@@ -227,7 +230,7 @@ function install(themeName, hostName) {
 }
 
 program
-.version('1.0.9')
+.version('1.2.0')
 .option('-v, --version', 'output version number')
 .arguments('<themename> [localhost]')
 .action(function (themename, localhost) {
