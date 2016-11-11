@@ -16,7 +16,7 @@ const updateNotifier = require('update-notifier');
 const pkg = require('./package.json');
 const notifier = updateNotifier({
     pkg,
-    updateCheckInterval: 1000 * 60 * 60 // Every hour
+    updateCheckInterval: 1000 * 60 // Every min
 });
 
 function banner() {
@@ -27,9 +27,10 @@ function banner() {
 		'(--| O O |--) | |   |  _ \\ / _ \\ / __/ _ \\| | | __/ _\\ | ' + EOL +
 		' --|_____|--  | \\__/\\ | | | (_) | (_| (_) | | | || (_| |' + EOL +
 		'  (  . .  )    \\____/_| |_|\\___/ \\___\\___/|_|_|\\__\\__,_|' + EOL +
-		'   –------     Wordpress Tema Base - NPM Installer 1.2.1' + EOL + 
+		'   –------     Wordpress Tema Base - NPM Installer 1.2.2' + EOL + 
 		'      ()'));
 	console.log('');
+	notifier.notify();
 }
 function bye() {
 	console.error(chalk.red(EOL +
@@ -40,7 +41,6 @@ function bye() {
 		'  (  . .  )' + EOL +
 		'   –------' + EOL + 
 		'      ()'));
-	notifier.notify();
 }
 function exito() {
 	console.error(chalk.bold.green(EOL +
@@ -51,7 +51,6 @@ function exito() {
 		'  (  . .  )         https://github.com/monchitonet/Chocolita' + EOL +
 		'   –------    https://github.com/kikeonline/chocolita-npm-installer' + EOL + 
 		'      ()'));
-	notifier.notify();
 	process.exit();
 }
 
@@ -230,7 +229,7 @@ function install(themeName, hostName) {
 }
 
 program
-.version('1.2.1')
+.version('1.2.2')
 .option('-v, --version', 'output version number')
 .arguments('<themename> [localhost]')
 .action(function (themename, localhost) {

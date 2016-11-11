@@ -1,6 +1,6 @@
 {
   "name": "chocolita-npm-installer",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Instalador del tema base de Wordpress Chocolita.",
   "bin": {
     "chocolita": "./index.js"
