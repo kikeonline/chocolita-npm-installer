@@ -1,4 +1,4 @@
-# Chocolita NPM Installer 🐮
+# Chocolita NPM Installer 1.2.2 🐮
 Instalador para el tema base de Wordpress [Chocolita.](https://github.com/monchitonet/Chocolita)
 
 ![alt tag](https://raw.githubusercontent.com/kikeonline/chocolita-npm-installer/master/screen.gif)
@@ -28,6 +28,15 @@ $ node -v
   Tambien podes pasar argumentos de la siguiente manera.
   ```
   $ chocolita <themename> [localhost]
+  ```
+## Actualizar
+Si ya tenes instalado el paquete podes actualizar a la ultima versión:
+  ```
+  $ npm update -g chocolita-npm-installer
+  ```
+y podes ver tu versión actual con:
+  ```
+  $ chocolita -v
   ```
   
 ## Chocolita
