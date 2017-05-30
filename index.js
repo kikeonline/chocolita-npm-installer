@@ -9,7 +9,7 @@ var path = require('path');
 var fs = require('fs')
 var os = require('os');
 var currentDir = process.cwd();
-var currentFolder = currentDir.split(path.resolve('/')).pop()
+var currentFolder = currentDir.split(path.sep).pop()
 var EOL = os.EOL;
 const log = console.log;
 const updateNotifier = require('update-notifier');
@@ -22,34 +22,34 @@ const notifier = updateNotifier({
 function banner() {
 	log(chalk.bold.blue(EOL +
 		'               _____ _                     _ _ _        ' + EOL +
-		'    ()_()     /  __ \\ |                   | (_) |       ' + EOL + 
+		'    ()_()     /  __ \\ |                   | (_) |       ' + EOL +
 		'   (     )    | /  \\/ |__   ___   ___ ___ | |_| |_ __ _ ' + EOL +
 		'(--| O O |--) | |   |  _ \\ / _ \\ / __/ _ \\| | | __/ _\\ | ' + EOL +
 		' --|_____|--  | \\__/\\ | | | (_) | (_| (_) | | | || (_| |' + EOL +
 		'  (  . .  )    \\____/_| |_|\\___/ \\___\\___/|_|_|\\__\\__,_|' + EOL +
-		'   –------     Wordpress Tema Base - NPM Installer 1.2.2' + EOL + 
+		'   –------     Wordpress Tema Base - NPM Installer 1.2.2' + EOL +
 		'      ()'));
 	console.log('');
 	notifier.notify();
 }
 function bye() {
 	console.error(chalk.red(EOL +
-		'    ()_()' + EOL + 
-		'   (     )' + EOL + 
+		'    ()_()' + EOL +
+		'   (     )' + EOL +
 		' --| X x |--' + EOL +
 		'(--|_____|--)' + EOL +
 		'  (  . .  )' + EOL +
-		'   –------' + EOL + 
+		'   –------' + EOL +
 		'      ()'));
 }
 function exito() {
 	console.error(chalk.bold.green(EOL +
-		'    ()_()' + EOL + 
-		'   (     )                 Instalación Completada ✓ 🐮' + EOL + 
+		'    ()_()' + EOL +
+		'   (     )                 Instalación Completada ✓ 🐮' + EOL +
 		' --| O O |--         Ingresa a WordPress y activa el tema.' + EOL +
 		'(--|_____|--)                Para más información:' + EOL +
 		'  (  . .  )         https://github.com/monchitonet/Chocolita' + EOL +
-		'   –------    https://github.com/kikeonline/chocolita-npm-installer' + EOL + 
+		'   –------    https://github.com/kikeonline/chocolita-npm-installer' + EOL +
 		'      ()'));
 	process.exit();
 }
