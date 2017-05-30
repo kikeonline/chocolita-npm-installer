@@ -1,4 +1,4 @@
-# Chocolita NPM Installer 1.2.2 🐮
+# Chocolita NPM Installer 1.2.3 🐮
 Instalador para el tema base de Wordpress [Chocolita.](https://github.com/monchitonet/Chocolita)
 
 ![alt tag](https://raw.githubusercontent.com/kikeonline/chocolita-npm-installer/master/screen.gif)
@@ -44,5 +44,7 @@ Para información sobre el uso del tema [Chocolita.](https://github.com/monchito
 
 ### Contribuciones
 - [Leandro Gómez](https://github.com/leogg)
+- [Tony Dinarte](https://github.com/dinartux)
+
 
 Con gusto pueden clonar/forkear/pull para mejorar el instalador 🐮
